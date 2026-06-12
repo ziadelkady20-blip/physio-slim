@@ -359,7 +359,9 @@ export default function SiteClient({ settings, hero, memberships, facilities, ga
 
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [activeTab, setActiveTab] = useState('gym')
+  type MembershipCategory = "gym" | "pool" | "both" | "ladies" | "kids"
+
+const [activeTab, setActiveTab] = useState<MembershipCategory>("gym")
   const [galleryFilter, setGalleryFilter] = useState('All')
   const [lightbox, setLightbox] = useState<{ open: boolean; idx: number }>({ open: false, idx: 0 })
   const [loaded, setLoaded] = useState(false)
