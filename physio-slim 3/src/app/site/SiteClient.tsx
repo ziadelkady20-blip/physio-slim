@@ -832,7 +832,7 @@ const [activeTab, setActiveTab] = useState<MembershipCategory>("gym")
                     <div className="flex items-start justify-between mb-3">
                       <div>
                         <div className="font-montserrat font-black text-xl leading-tight">{trainer.name}</div>
-                        <div className="text-[11px] tracking-[2px] text-gold font-montserrat font-bold uppercase mt-1">{trainer.role || trainer.specialization}</div>
+                        <div className="text-[11px] tracking-[2px] text-gold font-montserrat font-bold uppercase mt-1">{{trainer.specialization}</div>
                       </div>
                       <div className="text-[12px] text-gray-400 font-montserrat font-bold">{trainer.experience}</div>
                     </div>
