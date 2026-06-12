@@ -830,11 +830,19 @@ const [activeTab, setActiveTab] = useState<MembershipCategory>("gym")
                   </div>
                   <div className="p-7">
                     <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <div className="font-montserrat font-black text-xl leading-tight">{trainer.name}</div>
-                       <div className="text-[11px] tracking-[2px] text-gold font-montserrat font-bold uppercase mt-1">{{trainer.specialization}</div>
-                      <div className="text-[12px] text-gray-400 font-montserrat font-bold">{trainer.experience}</div>
-                    </div>
+                    <div>
+  <div className="font-montserrat font-black text-xl leading-tight">
+    {trainer.name}
+  </div>
+
+  <div className="text-[11px] tracking-[2px] text-gold font-montserrat font-bold uppercase mt-1">
+    {trainer.specialization}
+  </div>
+</div>
+
+<div className="text-[12px] text-gray-400 font-montserrat font-bold">
+  {trainer.experience}
+</div>
                     {trainer.bio && <p className="text-[13px] text-gray-400 leading-relaxed mb-4">{trainer.bio}</p>}
                     {trainer.certifications && trainer.certifications.length > 0 && (
                       <div className="flex flex-wrap gap-1.5 mb-5">
