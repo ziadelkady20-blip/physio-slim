@@ -419,7 +419,9 @@ export default function SiteClient({ settings, hero, memberships, facilities, ga
   }, [])
 
   // Membership categories
-  const categories = Array.from(new Set(memberships.map((m) => m.category)))
+ const categories = Array.from(
+  new Set(memberships.map((m) => m.category))
+) as Array<"gym" | "pool" | "both" | "ladies" | "kids">
   const effectiveTab = categories.includes(activeTab) ? activeTab : (categories[0] || activeTab)
   const activeMembers = memberships.filter((m) => m.active !== false && m.category === effectiveTab)
 
